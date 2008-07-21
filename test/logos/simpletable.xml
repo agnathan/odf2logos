@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logos-resource-content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/home/daniel/code/xslt/odf2logos/trunk/lib/xsd/content.xsd">
+    <articles>
+        <article id="Heading_2">
+            <toc-entry level="1">Heading 2</toc-entry>
+            <table class="Table1">
+                <tr>
+                    <td class="Table1.A1"><p class="Table_20_Contents">Row1, Col1</p></td>
+                    <td class="Table1.B1"><p class="Table_20_Contents">Row1, Col2</p></td>
+                </tr>
+                <tr>
+                    <td class="Table1.A2"><p class="Table_20_Contents">Row2, Col1</p></td>
+                    <td class="Table1.B2"><p class="Table_20_Contents">Row2, Col2</p></td>                </tr>
+            </table>
+        </article>
+    </articles>
+</logos-resource-content>

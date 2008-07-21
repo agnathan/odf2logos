@@ -1,0 +1,35 @@
+#!/bin/bash
+SAXON_PATH='/opt/saxon/saxon9.jar'
+
+usage="Usage: odf2logos file.odt" 
+if [ ! -n "$1" ]
+then
+  echo $usage 
+  exit 1 
+fi
+
+BASENAME=$1
+CURRENT_PATH=`pwd`
+BASE_PATH="${CURRENT_PATH}/.."
+TMP_PATH="${CURRENT_PATH}/${BASENAME}"_files
+XSL_PATH="${BASE_PATH}/src/xsl"
+JAVA="java  -classpath ${SAXON_PATH} net.sf.saxon.Transform"
+
+if [ -d $TMP_PATH ]; then
+	rm -rf $TMP_PATH
+fi
+
+unzip -q -d $TMP_PATH $1
+$JAVA -o $TMP_PATH/content-preprocessed.xml $TMP_PATH/content.xml $XSL_PATH/odf2logos-preprocess.xsl
+#$JAVA -o $TMP_PATH/$BASENAME-Content-avantReferenceBiblique.xml $TMP_PATH/content-preprocessed.xml $XSL_PATH/odf2logos-content.xsl
+$JAVA -o $BASENAME-LogosContent.xml $TMP_PATH/content-preprocessed.xml $XSL_PATH/odf2logos-content.xsl
+$JAVA -o $TMP_PATH/$BASENAME-style-map.xml $TMP_PATH/styles.xml $XSL_PATH/odf2logos-extract-logos-styles.xsl path=$TMP_PATH
+$JAVA -o $TMP_PATH/$BASENAME-style-map-with-aliases.xml $TMP_PATH/$BASENAME-style-map.xml $XSL_PATH/style-map.xsl path=$TMP_PATH
+$JAVA -o $BASENAME-LogosStyles.xml $TMP_PATH/$BASENAME-style-map-with-aliases.xml $XSL_PATH/apply-style-map.xsl mode=stylesheet 
+
+rm -rf $TMP_PATH
+
+# If you want to pretty print the files uncomment this line.  However, the Logos compiler will
+# keep the extra spaces added by pretty printing in the final document
+#tidy -xml -i -m -q $BASENAME-LogosContent.xml
+#tidy -xml -i -m -q $BASENAME-LogosStyles.xml

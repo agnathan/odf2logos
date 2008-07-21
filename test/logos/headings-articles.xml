@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="P1" style=""/>
+<class name="P2" style="font-weight:bold;font-weight:bold;"/>
+<class name="P3" style="font-style:italic;font-style:italic;font-style:italic;"/>
+<articles>
+   <article id="Heading_2">
+      <toc-entry level="2">Heading 2</toc-entry>
+      <p class="P1">This is normal text</p>
+      <p class="P2">This is bold</p>
+      <p class="P3">This is italic </p>
+   </article>
+   <article id="Heading_1">
+      <toc-entry level="1">Heading 1</toc-entry>
+      <p class="P1">This is normal text</p>
+      <p class="P2">This is bold</p>
+      <p class="P3">This is italic </p>
+   </article>
+   <article id="Heading_2">
+      <toc-entry level="2">Heading 2</toc-entry>
+      <p class="P1">This is normal text</p>
+      <p class="P2">This is bold</p>
+      <p class="P3">This is italic </p>
+   </article>
+   <article id="Heading_4">
+      <toc-entry level="4">Heading 4</toc-entry>
+      <p class="P1">This is normal text</p>
+      <p class="P2">This is bold</p>
+      <p class="P3">This is italic </p>
+      <p class="Standard"/>
+      <p class="Standard"/>
+   </article>
+</articles>

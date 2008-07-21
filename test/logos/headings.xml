@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logos-resource-content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../../lib/xsd/content.xsd"
+ xmlns:noNamespaceSchemaLocation="file:/home/daniel/code/xslt/odf2logos/trunk/lib/xsd/content.xsd">
+    <articles>
+        <article id="Heading_2">
+            <toc-entry level="1">Heading 2</toc-entry>
+            <p class="P1">Heading 2 - This is normal text</p>
+            <p class="P2">Heading 2 - This is bold</p>
+            <p class="P1">Heading 2 - This is italic </p>
+        </article>
+        <article id="Heading_2_Again">
+            <toc-entry level="1">Heading 2 Again</toc-entry>
+            <p class="P1">Heading 3 - This is normal text</p>
+            <p class="P2">Heading 3 - This is bold</p>
+            <p class="P1">Heading 3 - This is italic </p>
+            <p class="Title4">Heading 4</p>
+            <p class="P1">Heading 4 - This is normal text</p>
+            <p class="P2">Heading 4 - This is bold</p>
+            <p class="P1">Heading 4 - This is italic </p>
+            <p class="Standard"/>
+            <p class="Standard"/>
+        </article>
+    </articles>
+</logos-resource-content>

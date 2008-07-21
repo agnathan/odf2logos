@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logos-resource-content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/home/daniel/code/xslt/odf2logos/trunk/lib/xsd/content.xsd">
+    <articles>
+        <article id="Heading2">
+            <article-title>
+                <span>Heading 2</span>
+            </article-title>
+            <toc-entry level="1"/>
+            <p>This text is normal</p>
+            <p class="b">This text is bold</p>
+            <p class="i">This text is italic</p>
+        </article>
+    </articles>
+</logos-resource-content>
