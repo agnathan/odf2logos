@@ -1,1 +1,54 @@
+odf2logos
+=======
+
+Requirements:
+  - Java      http://www.java.com/
+  - Saxon-B   http://saxon.sourceforge.net/
+
+Optional:
+  - Ruby    http://www.ruby-lang.org/  ( tested with 1.8.6 ) 
+  - Rake    http://rake.rubyforge.org/
+  - RubyZip http://rubyzip.sourceforge.net/
+
+Disclaimer
+========
+This project is not related to or affiliated with Logos software in any way.  I am a missionary in France working as a volunteer to help fill the need for sorely needed Bible study materials in French-speaking Europe and Africa.
+
+Purpose
+======
+The purpose of this program is to have a high-quality Open Document Format to LogosXML version 3 transformer.
+
+Note: Logos changed its XML schema with version 3 of their software
+
+Getting Started Quick
+================
+1. Copy your open document file to the scripts directory.
+2. Run the odf2logos script
+	$ odf2logos myfile.odt
+
+Helping the Project
+==============
+From the very beginning of this project the correctness of the transformation has been top priority.  Therefore, the best way contribute to this project is to begin by looking at the unit tests, implementing one, and then making its work.
+If you've installed the optional Ruby components you can simply type.
+	$ rake test
+This will create a webpage with the output of the unit test results.  If any particular test fails, the XML input node, the XML template used to transform the node, the expected output, and the generated output are all displayed.  
+
+Structure of the Project
+=================
+LICENSE
+README
+Rakefile
+Demo/                    - ODF files that can be transformed to LogosXML. Each file demonstrates the 
+                           transformation of the particular ODF tag to a Logos equivalent tag.
+lib/schema-definitions/  - all XSD and RNG schema definitions live here
+lib/xsl-unit-testing/    - unit testing framework for XSLT based off of Jeni's XSLT Testing Framework
+script/                  - scripts which serve as front ends to XSLT stylesheets 
+src
+src/odf                   - I put all of the books that I work on in this directory
+src/target                - when I run the makefiles the output from src/odf is here
+test                      - when you run the unit tests HTML and XML reports are here
+
+
+Any questions, comments, concerns or if you'd like to help out, email me at Holmlund.dev@gmail.com
+
 
